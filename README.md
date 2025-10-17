@@ -25,4 +25,59 @@ Este proyecto muestra el funcionamiento básico de estructuras lineales basadas 
 ---
 
 ## 🧱 Estructura del proyecto
-
+📂 queue-project/
+│
+├── 📄 Node.h
+│ ├── Define la clase Node<T>
+│ ├── Atributos:
+│ │ ├── T data — valor almacenado
+│ │ ├── int priority — prioridad (para PriorityQueue)
+│ │ └── Node<T>* next — puntero al siguiente nodo
+│ └── Métodos:
+│ ├── getData(), getPriority()
+│ ├── getNext(), setNext()
+│ └── Constructor con o sin prioridad
+│
+├── 📄 Node.cpp
+│ └── Implementa los métodos definidos en Node.h
+│
+├── 📄 Queue.h
+│ ├── Define la clase Queue<T>
+│ ├── Atributos:
+│ │ ├── Node<T>* topNode — inicio de la cola
+│ │ ├── Node<T>* tailNode — fin de la cola
+│ │ └── int count — cantidad de elementos
+│ └── Métodos:
+│ ├── enQueue(const T& v)
+│ ├── deQueue()
+│ ├── isEmpty()
+│ ├── clear()
+│ └── print()
+│
+├── 📄 Queue.cpp
+│ └── Implementa los métodos de la clase Queue<T>
+│
+├── 📄 PriorityQueue.h
+│ ├── Define la clase PriorityQueue<T>
+│ ├── Atributos:
+│ │ ├── Node<T>* head — inicio de la cola de prioridad
+│ │ └── int count — cantidad de elementos
+│ └── Métodos:
+│ ├── enQue(const T& value, int priority)
+│ ├── deQueue()
+│ ├── peek()
+│ ├── isEmpty()
+│ ├── size()
+│ └── print()
+│
+├── 📄 PriorityQueue.cpp
+│ └── Implementa los métodos de la clase PriorityQueue<T>
+│
+├── 📄 main.cpp
+│ ├── Incluye "Queue.h" y "PriorityQueue.h"
+│ ├── Crea instancias de ambas colas
+│ ├── Inserta y elimina elementos
+│ └── Imprime resultados por consola
+│
+└── 📄 README.md
+└── Documentación del proyecto
